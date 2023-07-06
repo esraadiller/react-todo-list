@@ -23,6 +23,7 @@ export default function App() {
         { id: crypto.randomUUID(), title: newItem, completed: false},  
       ]
     }) 
+    setNewItem("")
   }
 
 
@@ -41,7 +42,7 @@ export default function App() {
   <ul className="list">
     {todos.map(todo => {
       return(
-    <li>
+    <li key={todo.id}>
       <label>
         <input type="checkbox" checked = {todo.completed}/>
         {todo.title}
