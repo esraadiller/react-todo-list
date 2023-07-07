@@ -29,6 +29,13 @@ function toggleTodo(id, completed) {
   })
 }
 
+function deleteTodo(id) {
+  setTodos(currentTodos => {
+    return currentTodos.filter()
+  })
+
+}
+
   return(
     <> 
      <form onSubmit={handleSubmit} className="new-item-form">
